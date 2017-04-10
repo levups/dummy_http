@@ -1,0 +1,21 @@
+name: http_dummy
+version: 0.1.0
+
+authors:
+  - Clément Joubert
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    branch: master
+  spec-kemal:
+    github: kemalcr/spec-kemal
+    branch: master
+
+targets:
+  http_dummy:
+    main: src/http_dummy.cr
+
+crystal: 0.21.1
+
+license: MIT
