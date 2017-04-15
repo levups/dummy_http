@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/levups/http_dummy_crystal.svg?branch=master)](https://travis-ci.org/levups/http_dummy_crystal)
+
 # HTTP Dummy
 
 Simple HTTP server app written in Crystal using Kemal framework.
