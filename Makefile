@@ -7,6 +7,9 @@ setup: ## Install crystal language and dependencies
 	@echo "Installing Crystal using Homebrew ..." && brew install crystal-lang
 	@echo "Installing Crystal dependencies ..."   && crystal deps
 
+run: ## Run the app
+	@echo "Running application ..." && crystal run src/dummy_http.cr
+
 build: ## Compile the app without optimizations
 	@echo "Compiling application ..." && crystal build src/dummy_http.cr
 
