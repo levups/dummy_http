@@ -1,8 +1,8 @@
 require "kemal"
 require "json"
-require "./dummy/*"
+require "./dummy_http/*"
 
-module HTTP::Dummy
+module DummyHTTP
   STATUSES.each do |code, message|
     next if code < 400
     error(code) do

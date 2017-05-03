@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/levups/http_dummy_crystal.svg?branch=master)](https://travis-ci.org/levups/http_dummy_crystal)
+[![Build Status](https://travis-ci.org/levups/dummy_http.svg?branch=master)](https://travis-ci.org/levups/dummy_http)
 
-# HTTP Dummy
+# Dummy HTTP
 
 Simple HTTP server app written in Crystal using Kemal framework.
 
@@ -51,19 +51,19 @@ KEMAL_ENV=test crystal spec
 Start the application:
 
 ```shell
-crystal run src/http/dummy.cr
+crystal run src/dummy_http.cr
 ```
 
 Build (compile) without optimizations:
 
 ```shell
-crystal build src/http/dummy.cr
+crystal build src/dummy_http.cr
 ```
 
 Build (compile) for release, with optimizations:
 
 ```shell
-crystal build --release src/http/dummy.cr
+crystal build --release src/dummy_http.cr
 ```
 
 ## Contributing

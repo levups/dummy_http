@@ -8,10 +8,10 @@ setup: ## Install crystal language and dependencies
 	@echo "Installing Crystal dependencies ..."   && crystal deps
 
 build: ## Compile the app without optimizations
-	@echo "Compiling application ..." && crystal build src/http/dummy.cr
+	@echo "Compiling application ..." && crystal build src/dummy_http.cr
 
 release: ## Compile the app for release (optimized binary)
-	@echo "Compiling application for release ..." && crystal build --release src/http/dummy.cr
+	@echo "Compiling application for release ..." && crystal build --release src/dummy_http.cr
 
 test: ## Run the test suite
 	@echo "Running tests ..." && KEMAL_ENV=test crystal spec

@@ -1,6 +1,6 @@
 require "../spec_helper"
 
-describe HTTP::Dummy do
+describe DummyHTTP do
   # You can use get,post,put,patch,delete to call the corresponding route.
   it "renders /" do
     get "/"
@@ -14,7 +14,7 @@ describe HTTP::Dummy do
     response.body.should eq("Hello, world!")
   end
 
-  HTTP::Dummy::STATUSES.each do |code, content|
+  DummyHTTP::STATUSES.each do |code, content|
     it "responds to #{code} HTTP status code" do
       get "/code/#{code}"
 
@@ -62,27 +62,27 @@ describe HTTP::Dummy do
     get "/xml"
 
     response.status_code.should eq(200)
-    response.body.should eq(HTTP::Dummy::Sample::XML)
+    response.body.should eq(DummyHTTP::Sample::XML)
   end
 
   it "returns html" do
     get "/html"
 
     response.status_code.should eq(200)
-    response.body.should eq(HTTP::Dummy::Sample::HTML)
+    response.body.should eq(DummyHTTP::Sample::HTML)
   end
 
   it "returns json" do
     get "/json"
 
     response.status_code.should eq(200)
-    response.body.should eq(HTTP::Dummy::Sample::JSON)
+    response.body.should eq(DummyHTTP::Sample::JSON)
   end
 
   it "returns text" do
     get "/text"
 
     response.status_code.should eq(200)
-    response.body.should eq(HTTP::Dummy::Sample::TEXT)
+    response.body.should eq(DummyHTTP::Sample::TEXT)
   end
 end

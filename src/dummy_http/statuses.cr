@@ -1,4 +1,4 @@
-module HTTP::Dummy
+module DummyHTTP
   # Kemal / Crystal require that when returning some HTTP status codes there
   # is no response body. 
   STATUSES = {
