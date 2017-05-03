@@ -1,2 +1,6 @@
 language: crystal
 
+# We'll use Github to check CI status
+notifications:
+  email: false
+
