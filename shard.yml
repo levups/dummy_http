@@ -1,5 +1,5 @@
 name: http_dummy
-version: 0.1.0
+version: 0.1.1
 
 authors:
   - Clément Joubert
@@ -14,7 +14,7 @@ dependencies:
 
 targets:
   http_dummy:
-    main: src/http_dummy.cr
+    main: src/http/dummy.cr
 
 crystal: 0.21.1
 
