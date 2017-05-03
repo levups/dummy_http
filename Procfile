@@ -1,1 +1,1 @@
-web: ./dummy --port $PORT
+web: dummy_http --port $PORT
