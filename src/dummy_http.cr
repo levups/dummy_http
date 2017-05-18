@@ -23,22 +23,22 @@ module DummyHTTP
   end
 
   get "/json" do |env|
-    env.response.content_type = "application/json"
+    env.response.content_type = "application/json;charset=utf-8"
     Sample::JSON
   end
 
   get "/text" do |env|
-    env.response.content_type = "text/plain"
+    env.response.content_type = "text/plain;charset=utf-8"
     Sample::TEXT
   end
 
   get "/xml" do |env|
-    env.response.content_type = "application/xml"
+    env.response.content_type = "application/xml;charset=utf-8"
     Sample::XML
   end
 
   get "/html" do |env|
-    env.response.content_type = "text/html"
+    env.response.content_type = "text/html;charset=utf-8"
     Sample::HTML
   end
 
