@@ -37,6 +37,20 @@ module DummyHTTP
     Sample::XML
   end
 
+  # Charset is required in content type for PhantomJS or browsers to properly
+  # detect encoding.
+  #
+  # Sample HTTP response headers for our previous Rails 5.1 app (http-tester)
+  #
+  # HTTP/1.1 200 OK
+  # Date: Thu, 18 May 2017 04:33:17 GMT
+  # Content-Type: text/html;charset=utf-8
+  # X-Xss-Protection: 1; mode=block
+  # X-Content-Type-Options: nosniff
+  # X-Frame-Options: SAMEORIGIN
+  # Content-Length: 128
+  #
+  # We should try to mimic those settings, as they seem to be sane.
   get "/html" do |env|
     env.response.content_type = "text/html;charset=utf-8"
     Sample::HTML
