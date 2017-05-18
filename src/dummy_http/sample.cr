@@ -22,6 +22,6 @@ module DummyHTTP
     </html>
     HEREDOC
 
-    JSON = { life: 42, foo: "bar", false: true, pi: 13.37 }.to_json    
+    JSON = { life: 42, foo: "bar", false: true, pi: 13.37 }.to_json
   end
 end
