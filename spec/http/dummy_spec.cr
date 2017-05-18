@@ -62,6 +62,8 @@ describe DummyHTTP do
     get "/xml"
 
     response.status_code.should eq(200)
+    response.headers["Content-Type"].should eq("application/xml;charset=utf-8")
+    response.headers["Content-Length"].should eq(DummyHTTP::Sample::XML.size.to_s)
     response.body.should eq(DummyHTTP::Sample::XML)
   end
 
@@ -69,6 +71,8 @@ describe DummyHTTP do
     get "/html"
 
     response.status_code.should eq(200)
+    response.headers["Content-Type"].should eq("text/html;charset=utf-8")
+    response.headers["Content-Length"].should eq(DummyHTTP::Sample::HTML.size.to_s)
     response.body.should eq(DummyHTTP::Sample::HTML)
   end
 
@@ -76,6 +80,8 @@ describe DummyHTTP do
     get "/json"
 
     response.status_code.should eq(200)
+    response.headers["Content-Type"].should eq("application/json;charset=utf-8")
+    response.headers["Content-Length"].should eq(DummyHTTP::Sample::JSON.size.to_s)
     response.body.should eq(DummyHTTP::Sample::JSON)
   end
 
@@ -83,6 +89,8 @@ describe DummyHTTP do
     get "/text"
 
     response.status_code.should eq(200)
+    response.headers["Content-Type"].should eq("text/plain;charset=utf-8")
+    response.headers["Content-Length"].should eq(DummyHTTP::Sample::TEXT.size.to_s)
     response.body.should eq(DummyHTTP::Sample::TEXT)
   end
 end
