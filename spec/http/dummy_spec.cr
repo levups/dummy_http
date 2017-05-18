@@ -24,8 +24,12 @@ describe DummyHTTP do
   end
 
   it "returns slow_response" do
+    time_before = Time.now
     get "/slow"
+    time_after = Time.now
 
+    duration = time_after.epoch_f - time_before.epoch_f
+    duration.should be_close(5, 1)
     response.status_code.should eq(200)
     response.body.should contain("Hello, tired!")
   end
