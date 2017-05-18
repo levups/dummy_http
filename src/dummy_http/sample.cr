@@ -2,7 +2,7 @@ module DummyHTTP
   module Sample
     TEXT = <<-HEREDOC
     Stand up for what you believe in, even if it means standing alone.
-    — Andy Biersack
+    - Andy Biersack
     HEREDOC
 
     XML = <<-HEREDOC
