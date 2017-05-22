@@ -29,7 +29,7 @@ describe DummyHTTP do
     time_after = Time.now
 
     duration = time_after.epoch_f - time_before.epoch_f
-    duration.should be_close(5, 1)
+    duration.should be_close(10, 1)
     response.status_code.should eq(200)
     response.body.should contain("Hello, tired!")
   end
