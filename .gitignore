@@ -1,5 +1,6 @@
-/doc/
-/lib/
-/bin/
 /.shards/
+/bin/
+/doc/
 /dummy_http
+/dummy_http.dwarf
+/lib/
