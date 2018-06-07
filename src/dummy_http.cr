@@ -57,24 +57,28 @@ module DummyHTTP
   end
 
   get "/slow" do |env|
-    sleep 5
+    sleep 10
     "Hello, tired!"
   end
 
   get "/redirection/infinite" do |env|
     env.redirect "/redirection/infinite"
+    "You are being redirected for ever and ever."
   end
 
   get "/redirection/local" do |env|
     env.redirect "/html"
+    "You are being redirected to an HTML5 local page."
   end
 
   get "/redirection/temporary" do |env|
     env.redirect "/html", 301
+    "You are being redirected temporarily."
   end
 
   get "/redirection/other_domain" do |env|
     env.redirect "https://www.google.com"
+    "You are being redirected to Google.com permanently."
   end
 end
 
