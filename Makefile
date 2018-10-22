@@ -1,5 +1,11 @@
 # hcs/Makefile
 
+# Aliases to everyday takss faster
+b : build
+r : run
+s : setup
+t : test
+
 # Don't forget : Makefiles use tabs indentation, not spaces !
 
 setup: ## Install crystal language and dependencies
