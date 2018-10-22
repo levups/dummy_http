@@ -1,4 +1,4 @@
-# hcs/Makefile
+# dummy-http/Makefile
 
 .PHONY: test
 
@@ -11,9 +11,8 @@ t : test
 # Don't forget : Makefiles use tabs indentation, not spaces !
 
 setup: ## Install crystal language and dependencies
-	@echo "Updating Homebrew ..."                 && brew update
 	@echo "Installing Crystal using Homebrew ..." && brew install crystal-lang
-	@echo "Installing Crystal dependencies ..."   && crystal deps
+	@echo "Installing Crystal dependencies ..."   && shards
 
 run: ## Run the app
 	@echo "Running application ..." && crystal run src/dummy_http.cr
