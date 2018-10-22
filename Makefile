@@ -1,5 +1,7 @@
 # hcs/Makefile
 
+.PHONY: test
+
 # Aliases to everyday takss faster
 b : build
 r : run
